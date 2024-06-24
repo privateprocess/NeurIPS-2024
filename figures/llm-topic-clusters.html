@@ -1,0 +1,990 @@
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Topic</th>
+      <th>Count</th>
+      <th>Name</th>
+      <th>Representation</th>
+      <th>Representative_Docs</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>-1</td>
+      <td>2048</td>
+      <td>-1_the_of_that_author</td>
+      <td>[the, of, that, author, to, is, and, change, climate, in]</td>
+      <td>[The author is critical of the industry's actions., The Republican AGs are motivated by a desire to protect the interests of oil companies and their financial gain, rather than a genuine concern for the well-being of the country or the environment., Climate activists are often more concerned with feeling good about their actions rather than making significant changes to address the crisis.]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0</td>
+      <td>288</td>
+      <td>0_meat_plant_based_animal</td>
+      <td>[meat, plant, based, animal, food, veganism, diets, agriculture, livestock, vegan]</td>
+      <td>[Plant-based meat is a simple and effective solution to climate change., Plant-based meat is a simple solution to climate change., Plant-based meat is a simple and effective solution to climate change.]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td>155</td>
+      <td>1_trump_presidency_donald_actions</td>
+      <td>[trump, presidency, donald, actions, policies, would, drill, second, detrimental, russian]</td>
+      <td>[A Trump presidency would have negative consequences for the climate., The author is critical of Trump's policies and actions., The author is critical of Trump's actions and policies.]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2</td>
+      <td>146</td>
+      <td>2_humorous_humor_tone_lighthearted</td>
+      <td>[humorous, humor, tone, lighthearted, sarcastic, using, express, point, sarcasm, comment]</td>
+      <td>[Humorous and lighthearted tone in the personal comment., The author finds humor in the situation, implying a lighthearted and possibly sarcastic tone., The tone of the comment is lighthearted and humorous.]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>3</td>
+      <td>104</td>
+      <td>3_optimistic_hope_hopeful_progress</td>
+      <td>[optimistic, hope, hopeful, progress, optimism, positive, about, possibility, outlook, author]</td>
+      <td>[The author is optimistic about the potential for their party to make a positive impact on the issue., Optimistic about the potential for progress in addressing climate change., Optimistic about the progress made in addressing the climate crisis.]</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>4</td>
+      <td>95</td>
+      <td>4_election_democrats_voting_vote</td>
+      <td>[election, democrats, voting, vote, crucial, 2024, voters, party, presidential, activists]</td>
+      <td>[2024 is a crucial voting year, and every vote matters., 2024 is a crucial election year for climate change and every vote matters., Voting in the 2024 election is crucial and every vote matters.]</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>5</td>
+      <td>91</td>
+      <td>5_temperatures_record_records_ocean</td>
+      <td>[temperatures, record, records, ocean, 2023, temperature, expected, breaking, nasa, warming]</td>
+      <td>[The current year is expected to be the hottest in human history, with record-breaking greenhouse gas levels, global temperatures, and sea level rise., The current record-breaking warmth in 2023 is a sign that global warming might be accelerating., The current state of climate change is worse than expected, with record temperatures and rising CO2 emissions.]</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>6</td>
+      <td>84</td>
+      <td>6_fossil_fuels_fuel_out</td>
+      <td>[fossil, fuels, fuel, out, usage, phase, talks, step, coal, oil]</td>
+      <td>[The U.S. is supporting the phase-out of fossil fuels., The phase-out of fossil fuels is a necessary step in addressing climate change., The U.S. is likely to support the phase-out of fossil fuels.]</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>7</td>
+      <td>82</td>
+      <td>7_florida_desantis_law_decision</td>
+      <td>[florida, desantis, law, decision, remove, ron, from, laws, governor, strongly]</td>
+      <td>[Criticism of DeSantis' decision to remove "climate change" from Florida law., Criticism of DeSantis' decision to remove "climate change" from Florida law., Criticism of DeSantis' decision to remove "climate change" from Florida law.]</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>8</td>
+      <td>81</td>
+      <td>8_electric_vehicles_evs_cars</td>
+      <td>[electric, vehicles, evs, cars, battery, ev, fewer, diesel, petrol, produce]</td>
+      <td>[Electric cars produce fewer carbon emissions than petrol or diesel vehicles., Electric vehicles (EVs) are not a significant solution to climate change., Electric cars may not produce fewer carbon emissions than petrol or diesel vehicles.]</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>9</td>
+      <td>80</td>
+      <td>9_pessimistic_humanity_future_ability</td>
+      <td>[pessimistic, humanity, future, ability, about, author, humans, planet, believes, state]</td>
+      <td>[The author is pessimistic about humanity's ability to address climate change., The author is pessimistic about the future of the planet and humanity., Possibly pessimistic about the future of humanity's ability to address climate change.]</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>10</td>
+      <td>70</td>
+      <td>10_taking_seriously_not_insufficient</td>
+      <td>[taking, seriously, not, insufficient, current, inadequate, enough, pace, meet, are]</td>
+      <td>[Many people are not taking the consequences of climate change seriously enough., Political leaders are not taking climate change seriously., Political leaders are not taking climate change seriously enough.]</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>11</td>
+      <td>64</td>
+      <td>11_nuclear_power_solution_energy</td>
+      <td>[nuclear, power, solution, energy, viable, reliable, plants, due, experts, safety]</td>
+      <td>[Nuclear power is not a viable solution to climate change due to its high risk., Nuclear power is not a viable solution for climate change due to the high risk., Nuclear power is a viable solution for climate change.]</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>12</td>
+      <td>64</td>
+      <td>12_capture_technology_removal_carbon</td>
+      <td>[capture, technology, removal, carbon, ineffective, co2, expensive, solution, removing, air]</td>
+      <td>[Carbon capture and removal is an impractical and expensive solution to climate change., Carbon capture technology is an ineffective and expensive solution to climate change., Carbon capture technology is an ineffective and expensive solution to climate change.]</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>13</td>
+      <td>61</td>
+      <td>13_deny_who_those_critical</td>
+      <td>[deny, who, those, critical, author, reality, beliefs, denial, believe, percentage]</td>
+      <td>[The author is likely skeptical of those who deny the reality of climate change., The author is critical of those who deny the reality of climate change., The author is likely skeptical or critical of those who deny climate change.]</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>14</td>
+      <td>60</td>
+      <td>14_biden_administration_president_step</td>
+      <td>[biden, administration, president, step, agenda, trump, rule, significant, positive, manchin]</td>
+      <td>[The Biden administration is taking steps to address climate change., President Biden's climate agenda is significant and important., The Biden administration's climate law is a significant step towards addressing methane pollution.]</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>15</td>
+      <td>59</td>
+      <td>15_billionaires_wealthy_disproportionately_bezos</td>
+      <td>[billionaires, wealthy, disproportionately, bezos, taxing, wealth, affect, poorest, their, class]</td>
+      <td>[The financial burden of transitioning away from fossil fuels will disproportionately affect the wealthy, rather than the poor and middle class., The financial losses from moving away from fossil fuels will disproportionately affect the wealthy, not the poor and middle class., The wealthy, including billionaires, have a significant role to play in addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>16</td>
+      <td>57</td>
+      <td>16_musk_elon_his_success</td>
+      <td>[musk, elon, his, success, deniers, electrification, commitment, environmental, credentials, china]</td>
+      <td>[Elon Musk has abandoned his commitment to climate change solutions., Elon Musk has abandoned his commitment to climate solutions., Elon Musk has abandoned his commitment to climate solutions.]</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>17</td>
+      <td>56</td>
+      <td>17_capitalism_tool_ineffective_prioritizes</td>
+      <td>[capitalism, tool, ineffective, prioritizes, flawed, fight, addressing, capital, can, effective]</td>
+      <td>[Capitalism is ineffective in addressing climate change., Capitalism is ineffective in addressing climate change., Capitalism is ineffective in addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>18</td>
+      <td>56</td>
+      <td>18_disagrees_skeptical_skepticism_peterson</td>
+      <td>[disagrees, skeptical, skepticism, peterson, idea, acquaintance, claim, towards, views, scientists]</td>
+      <td>[Skepticism towards Peterson's credibility on the topic., Skepticism towards the warnings of scientists about climate change., Disagrees with Jordan Peterson's views on climate change.]</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>19</td>
+      <td>56</td>
+      <td>19_biden_president_policy_exports</td>
+      <td>[biden, president, policy, exports, gas, production, his, under, drilling, project]</td>
+      <td>[President Biden's stance on gas exports is inconsistent with his climate policy., President Biden's support for natural gas exports is inconsistent with his climate policy., President Biden's stance on gas exports is inconsistent with his climate policy.]</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>20</td>
+      <td>56</td>
+      <td>20_concerned_potential_loss_about</td>
+      <td>[concerned, potential, loss, about, author, coastal, worried, impact, the, aware]</td>
+      <td>[The author is concerned about the potential loss of these luxuries., The author is likely concerned about the potential consequences of climate change., The author is concerned about the impact of climate change.]</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>21</td>
+      <td>54</td>
+      <td>21_address_action_needed_urgent</td>
+      <td>[address, action, needed, urgent, necessary, urgency, immediate, take, requires, effort]</td>
+      <td>[Urgent action is needed to address climate change., Urgent action is needed to address climate change., Urgent action is needed to address climate change.]</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>22</td>
+      <td>53</td>
+      <td>22_children_having_breakdown_fears</td>
+      <td>[children, having, breakdown, fears, family, decisions, have, kids, people, starting]</td>
+      <td>[The author believes that climate breakdown is a major reason for people not having children., The author believes that the climate crisis is a significant concern that should influence personal decisions, such as having children., Climate breakdown is a significant factor in people's decisions not to have children.]</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>23</td>
+      <td>51</td>
+      <td>23_people_term_brains_unlikely</td>
+      <td>[people, term, brains, unlikely, inclined, naturally, unwilling, short, sacrifices, humans]</td>
+      <td>[Human brains are not naturally inclined to address climate change., Humans are unlikely to change their ways and will continue to prioritize short-term gains over long-term sustainability., Human brains are not naturally inclined to prioritize long-term benefits over short-term gains.]</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>24</td>
+      <td>51</td>
+      <td>24_pressing_issue_requires_attention</td>
+      <td>[pressing, issue, requires, attention, serious, immediate, that, change, severe, consequences]</td>
+      <td>[Climate change is a pressing issue that requires immediate attention., Climate change is a pressing issue that requires immediate attention., Climate change is a pressing issue that requires immediate attention.]</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>25</td>
+      <td>51</td>
+      <td>25_over_corporations_profits_prioritize</td>
+      <td>[over, corporations, profits, prioritize, concerns, influence, interests, environmental, term, prioritizing]</td>
+      <td>[The government should prioritize environmental concerns over the interests of the fossil fuel industry., The industry is prioritizing profits over environmental concerns., Powerful corporations may prioritize profits over genuine climate action.]</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>26</td>
+      <td>51</td>
+      <td>26_situation_dire_urgent_requires</td>
+      <td>[situation, dire, urgent, requires, immediate, already, action, current, alarming, delaying]</td>
+      <td>[The situation is dire and requires immediate action., The situation is dire and requires urgent action., The situation is dire and requires immediate action.]</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>27</td>
+      <td>51</td>
+      <td>27_frustration_disappointment_lack_with</td>
+      <td>[frustration, disappointment, lack, with, frustrated, progress, inability, meaningful, causes, levels]</td>
+      <td>[Frustration with the lack of action on climate change., Frustration and disappointment towards the lack of progress in addressing climate change., Frustration with the lack of progress on climate change.]</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>28</td>
+      <td>50</td>
+      <td>28_solar_panels_electrification_home</td>
+      <td>[solar, panels, electrification, home, lawn, equipment, materials, electric, energy, power]</td>
+      <td>[Electric lawn equipment and solar panels can be effective "gateways" for home electrification and reducing fossil fuel usage., Electric lawn equipment and solar panels could be effective "gateways" for home electrification., Electric lawn equipment and solar panels can be effective "gateways" to home electrification.]</td>
+    </tr>
+    <tr>
+      <th>30</th>
+      <td>29</td>
+      <td>45</td>
+      <td>29_insurance_home_insurers_homes</td>
+      <td>[insurance, home, insurers, homes, areas, related, disasters, costs, homeowners, drop]</td>
+      <td>[Home insurance is becoming less necessary due to rising costs and climate-driven natural disasters., Home insurance is becoming less necessary due to rising costs and climate-related disasters., Home insurance is becoming less necessary due to rising costs and climate-driven disasters.]</td>
+    </tr>
+    <tr>
+      <th>31</th>
+      <td>30</td>
+      <td>45</td>
+      <td>30_christian_denial_zionists_commentators</td>
+      <td>[christian, denial, zionists, commentators, misinformation, deniers, biblical, apocalypse, conservative, wing]</td>
+      <td>[Climate change denial is prevalent among conservative commentators and right-wing Christian media., Climate change denial is a common phenomenon among conservative commentators and right-wing Christian media., Climate change denial by conservative commentators and right-wing Christian media is misguided.]</td>
+    </tr>
+    <tr>
+      <th>32</th>
+      <td>31</td>
+      <td>44</td>
+      <td>31_open_cautious_considering_willing</td>
+      <td>[open, cautious, considering, willing, appreciates, complexity, further, perspectives, provided, tool]</td>
+      <td>[Open to considering the claim if provided with credible sources and data analysis., Open to feedback and willing to learn from others., The author seems to be cautious and open to exploring the concept further.]</td>
+    </tr>
+    <tr>
+      <th>33</th>
+      <td>32</td>
+      <td>42</td>
+      <td>32_banks_deposits_individual_such</td>
+      <td>[banks, deposits, individual, such, footprint, can, loans, small, individuals, changes]</td>
+      <td>[Banks and individuals share responsibility for climate issues., Banks create loans and deposits through accounting entries, not by lending from existing deposits., Financial choices, such as choosing banks that don't fund fossil fuel projects, can be a way to take action.]</td>
+    </tr>
+    <tr>
+      <th>34</th>
+      <td>33</td>
+      <td>42</td>
+      <td>33_accountable_held_oil_bosses</td>
+      <td>[accountable, held, oil, bosses, companies, responsible, should, big, executives, fuel]</td>
+      <td>[Believes that big oil companies should be held accountable for climate change., Big oil companies should be held accountable for climate change., Big oil companies should be held accountable for climate change.]</td>
+    </tr>
+    <tr>
+      <th>35</th>
+      <td>34</td>
+      <td>41</td>
+      <td>34_energy_renewable_cheaper_clean</td>
+      <td>[energy, renewable, cheaper, clean, development, generally, green, solar, transition, batteries]</td>
+      <td>[Renewable energy is generally cheaper than fossil fuels., Renewable energy is generally cheaper than fossil fuels., Renewable energy is generally cheaper than fossil fuels.]</td>
+    </tr>
+    <tr>
+      <th>36</th>
+      <td>35</td>
+      <td>40</td>
+      <td>35_hopelessness_feels_sense_hopeless</td>
+      <td>[hopelessness, feels, sense, hopeless, feeling, resignation, powerlessness, despair, overwhelmed, future]</td>
+      <td>[The author may be expressing a sense of hopelessness or powerlessness., The author's tone is one of despair and hopelessness, suggesting a sense of resignation and powerlessness., The author may be expressing a sense of hopelessness or despair about the situation.]</td>
+    </tr>
+    <tr>
+      <th>37</th>
+      <td>36</td>
+      <td>39</td>
+      <td>36_deal_cop28_agreement_cop</td>
+      <td>[deal, cop28, agreement, cop, phasing, fund, meetings, loopholes, fossil, greener]</td>
+      <td>[The COP28 deal is inadequate and has significant loopholes that benefit the fossil fuel industry., COP28's failure to reach a deal on phasing out fossil fuels is a significant setback., The COP28 Climate Deal is inadequate in its approach to phasing out fossil fuels.]</td>
+    </tr>
+    <tr>
+      <th>38</th>
+      <td>37</td>
+      <td>37</td>
+      <td>37_financial_trillion_damage_cost</td>
+      <td>[financial, trillion, damage, cost, potentially, economic, costing, per, have, impact]</td>
+      <td>[Climate change could have a significant impact on the financial system., The financial cost of addressing climate change is significant, potentially ranging from $5 to $10 trillion per year., Climate change damage could have a significant economic impact, potentially costing $38 trillion per year by 2050.]</td>
+    </tr>
+    <tr>
+      <th>39</th>
+      <td>38</td>
+      <td>37</td>
+      <td>38_doomerism_optimists_doomers_overly</td>
+      <td>[doomerism, optimists, doomers, overly, doomer, doomsayers, discussions, pessimistic, perspective, an]</td>
+      <td>[Climate doomerism is an overly pessimistic view that an uninhabitable planet is inevitable., Climate doomerism is an overly pessimistic view., Climate doomerism is an overly pessimistic view of the future.]</td>
+    </tr>
+    <tr>
+      <th>40</th>
+      <td>39</td>
+      <td>37</td>
+      <td>39_flying_private_tourism_jets</td>
+      <td>[flying, private, tourism, jets, travel, contributor, footprint, rationed, flights, cruise]</td>
+      <td>[Recognizes the significant carbon footprint of flying., Flying has a significant negative impact on the environment due to its carbon footprint., Private jets are a significant contributor to carbon emissions.]</td>
+    </tr>
+    <tr>
+      <th>41</th>
+      <td>40</td>
+      <td>35</td>
+      <td>40_support_americans_majority_schools</td>
+      <td>[support, americans, majority, schools, most, underestimates, strong, public, education, share]</td>
+      <td>[Majority of Americans support carbon tax on fossil fuel companies., The majority of Americans support reducing climate change, but..., The majority of Americans support reducing climate change.]</td>
+    </tr>
+    <tr>
+      <th>42</th>
+      <td>41</td>
+      <td>33</td>
+      <td>41_glacier_melting_sea_antarctica</td>
+      <td>[glacier, melting, sea, antarctica, doomsday, west, level, rise, rapid, antarctic]</td>
+      <td>[The "Doomsday Glacier" has significant potential to impact sea level rise., Acceptance of West Antarctica's rapid melting and its potential consequences for sea level rise., Rapid melting in West Antarctica is a pressing issue with severe consequences for sea level rise.]</td>
+    </tr>
+    <tr>
+      <th>43</th>
+      <td>42</td>
+      <td>32</td>
+      <td>42_skeptical_effectiveness_about_goal</td>
+      <td>[skeptical, effectiveness, about, goal, author, citizen, skepticism, realistic, this, protests]</td>
+      <td>[The author is skeptical of the effectiveness of the activist's actions., The author is skeptical about the effectiveness of any actions to address the issue., The author is skeptical of the effectiveness of current policies.]</td>
+    </tr>
+    <tr>
+      <th>44</th>
+      <td>43</td>
+      <td>32</td>
+      <td>43_lack_frustrated_critical_progress</td>
+      <td>[lack, frustrated, critical, progress, author, action, of, practical, moment, disappointed]</td>
+      <td>[The author is critical of the lack of progress in addressing climate change., The author is critical of the lack of action or progress in addressing the crisis., The author is likely frustrated with the lack of progress in addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>45</th>
+      <td>44</td>
+      <td>31</td>
+      <td>44_economic_growth_focus_obstacle</td>
+      <td>[economic, growth, focus, obstacle, economists, economics, economy, current, addressing, prize]</td>
+      <td>[The focus on economic growth is a major obstacle to addressing climate change., The focus on economic growth is a significant obstacle to addressing climate change., The current focus on economic growth is a major obstacle to addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>46</th>
+      <td>45</td>
+      <td>31</td>
+      <td>45_neutral_without_expressing_factual</td>
+      <td>[neutral, without, expressing, factual, opinion, presents, clear, presenting, facts, objective]</td>
+      <td>[The author presents this information as factual, without expressing a clear opinion or emotion., The author presents a neutral, informative tone, without expressing a clear opinion or bias., The article presents a neutral, factual perspective on the topic, without expressing a clear opinion or emotion.]</td>
+    </tr>
+    <tr>
+      <th>47</th>
+      <td>46</td>
+      <td>31</td>
+      <td>46_dismissive_concerns_downplaying_downplays</td>
+      <td>[dismissive, concerns, downplaying, downplays, speaker, significance, yacht, monaco, buyers, dismissing]</td>
+      <td>[Climate concerns are being ignored or downplayed by some individuals (specifically, Monaco yacht buyers)., The speaker's stance is dismissive of climate concerns., The speaker is dismissive of climate concerns.]</td>
+    </tr>
+    <tr>
+      <th>48</th>
+      <td>47</td>
+      <td>30</td>
+      <td>47_heat_wave_mexico_temperatures</td>
+      <td>[heat, wave, mexico, temperatures, extreme, experiencing, heatwave, asia, india, toll]</td>
+      <td>[Acknowledges the extreme heat in Mexico., Mexico is experiencing extreme heat with a rising death toll., The current heat wave is a significant concern.]</td>
+    </tr>
+    <tr>
+      <th>49</th>
+      <td>48</td>
+      <td>30</td>
+      <td>48_ai_centers_solutions_investors</td>
+      <td>[ai, centers, solutions, investors, energy, has, disaster, role, data, potential]</td>
+      <td>[The author is optimistic about the role of AI in addressing climate change., AI has a potential negative impact on the climate., AI is not a significant contributor to climate change.]</td>
+    </tr>
+    <tr>
+      <th>50</th>
+      <td>49</td>
+      <td>30</td>
+      <td>49_warning_dire_un_warns</td>
+      <td>[warning, dire, un, warns, world, extinction, risk, catastrophic, hell, physicists]</td>
+      <td>[The climate report is dire and warns of potential societal collapse., The UN's warning about climate change is accurate and urgent., The world is facing severe climate consequences, with a warning from the UN.]</td>
+    </tr>
+    <tr>
+      <th>51</th>
+      <td>50</td>
+      <td>29</td>
+      <td>50_exxon_mobil_shareholders_silence</td>
+      <td>[exxon, mobil, shareholders, silence, hiding, trying, lawsuit, attempt, tobacco, warming]</td>
+      <td>[Exxon Mobil's lawsuit against its shareholders is an attempt to silence them about global warming., Exxon Mobil's lawsuit against its shareholders is an attempt to silence them about global warming., Exxon Mobil is trying to silence its shareholders about global warming.]</td>
+    </tr>
+    <tr>
+      <th>52</th>
+      <td>51</td>
+      <td>28</td>
+      <td>51_speaker_house_mike_johnson</td>
+      <td>[speaker, house, mike, johnson, republican, stance, strongly, us, views, concerns]</td>
+      <td>[Strongly critical of the new Republican US House Speaker's support for fossil fuels., Criticism of the Republican US House Speaker's stance on fossil fuels and climate concerns., Strongly disapproves of the new Republican US House Speaker's stance on fossil fuels and climate concerns.]</td>
+    </tr>
+    <tr>
+      <th>53</th>
+      <td>52</td>
+      <td>28</td>
+      <td>52_tax_taxes_dividend_carbon</td>
+      <td>[tax, taxes, dividend, carbon, price, switch, implementing, lowering, activities, equal]</td>
+      <td>[Support for a carbon tax to reduce other taxes by an equal amount., The tax-and-dividend approach is a more effective way to achieve this goal., Carbon tax and dividend is a viable policy solution to address climate change.]</td>
+    </tr>
+    <tr>
+      <th>54</th>
+      <td>53</td>
+      <td>28</td>
+      <td>53_urgency_alarm_sense_tone</td>
+      <td>[urgency, alarm, sense, tone, situation, expressing, yikes, phrase, concern, urgent]</td>
+      <td>[There is a sense of urgency and frustration in the author's tone., There is a sense of urgency and concern about the situation., The user is expressing a sense of urgency and alarm about the situation.]</td>
+    </tr>
+    <tr>
+      <th>55</th>
+      <td>54</td>
+      <td>28</td>
+      <td>54_models_accurate_mainstream_trends</td>
+      <td>[models, accurate, mainstream, trends, may, showing, ignored, ipcc, some, outliers]</td>
+      <td>[Mainstream climate models may not be accurate., Mainstream climate models may not be accurate, and some outliers may be showing more accurate climate trends., Mainstream climate models may not be accurate, and some previously ignored models may be more accurate.]</td>
+    </tr>
+    <tr>
+      <th>56</th>
+      <td>55</td>
+      <td>28</td>
+      <td>55_accuracy_study_article_information</td>
+      <td>[accuracy, study, article, information, report, assumptions, findings, poll, skeptical, questioning]</td>
+      <td>[Skeptical about the accuracy of the poll., Skepticism towards the severity or accuracy of the news article., Skeptical about the accuracy of the original article's information.]</td>
+    </tr>
+    <tr>
+      <th>57</th>
+      <td>56</td>
+      <td>28</td>
+      <td>56_drastic_measures_address_importance</td>
+      <td>[drastic, measures, address, importance, action, emphasize, take, advocating, metaphor, proposes]</td>
+      <td>[Possibly advocating for more drastic measures to address the crisis., The author may be suggesting that drastic measures are necessary to address the crisis., May be advocating for more drastic measures to address the issue.]</td>
+    </tr>
+    <tr>
+      <th>58</th>
+      <td>57</td>
+      <td>28</td>
+      <td>57_criticism_movement_who_activism</td>
+      <td>[criticism, movement, who, activism, hypocrisy, conference, environmental, criticized, blame, towards]</td>
+      <td>[Criticism of the hypocrisy of wealthy individuals who prioritize their own interests over environmental concerns., Criticism towards people who are not taking action to address climate change., Criticism of the lack of action on climate change.]</td>
+    </tr>
+    <tr>
+      <th>59</th>
+      <td>58</td>
+      <td>28</td>
+      <td>58_requires_pressing_attention_immediate</td>
+      <td>[requires, pressing, attention, immediate, crisis, issue, serious, that, action, intertwined]</td>
+      <td>[The climate crisis is a pressing issue that requires immediate attention., The climate crisis is a pressing issue that requires immediate attention., The climate crisis is a pressing issue that requires immediate attention.]</td>
+    </tr>
+    <tr>
+      <th>60</th>
+      <td>59</td>
+      <td>27</td>
+      <td>59_poses_threat_having_significant</td>
+      <td>[poses, threat, having, significant, avocados, coffee, wine, impact, cocoa, olive]</td>
+      <td>[Climate change is having a significant impact on everyday luxuries, such as wine, olive oil, coffee, and cocoa., Climate change poses a significant threat to Texas., Climate change poses a significant threat to the coffee industry.]</td>
+    </tr>
+    <tr>
+      <th>61</th>
+      <td>60</td>
+      <td>27</td>
+      <td>60_levels_co2_increase_exponential</td>
+      <td>[levels, co2, increase, exponential, increasing, dioxide, concentration, concentrations, rate, shows]</td>
+      <td>[Concerned about the rapid increase in carbon dioxide levels., Urgent concern about the rapid increase in CO2 levels., Concerned about the increasing CO2 levels and the lack of progress in reducing emissions.]</td>
+    </tr>
+    <tr>
+      <th>62</th>
+      <td>61</td>
+      <td>27</td>
+      <td>61_reversed_irreversible_cannot_inevitable</td>
+      <td>[reversed, irreversible, cannot, inevitable, impossible, lost, atmosphere, process, pointless, elevated]</td>
+      <td>[Climate change cannot be reversed., Climate change cannot be reversed., Climate change cannot be reversed.]</td>
+    </tr>
+    <tr>
+      <th>63</th>
+      <td>62</td>
+      <td>26</td>
+      <td>62_swift_taylor_footprint_her</td>
+      <td>[swift, taylor, footprint, her, excessive, carbon, kelce, she, travis, tons]</td>
+      <td>[The author is critical of Taylor Swift's environmental impact, implying that it is excessive., Taylor Swift's carbon footprint is excessive and humorous., Taylor Swift's carbon footprint is a significant issue.]</td>
+    </tr>
+    <tr>
+      <th>64</th>
+      <td>63</td>
+      <td>26</td>
+      <td>63_geoengineering_buried_deep_earth</td>
+      <td>[geoengineering, buried, deep, earth, solution, skeptical, effectiveness, idea, engineering, slowing]</td>
+      <td>[Skeptical about Geoengineering's ability to slow climate change., Skeptical of geoengineering as a solution to climate change due to potential environmental impacts., Skeptical about the effectiveness of geoengineering in slowing climate change.]</td>
+    </tr>
+    <tr>
+      <th>65</th>
+      <td>64</td>
+      <td>26</td>
+      <td>64_class_working_free_current</td>
+      <td>[class, working, free, current, injustice, system, inequality, rich, unsustainable, market]</td>
+      <td>[The rich are taking advantage of the situation, and there is a sense of injustice and inequality., The wealthy elite use moral panics to distract the working class and maintain their power., The current "free market" system is unfair and unsustainable.]</td>
+    </tr>
+    <tr>
+      <th>66</th>
+      <td>65</td>
+      <td>26</td>
+      <td>65_saudi_phaseout_arabia_phase</td>
+      <td>[saudi, phaseout, arabia, phase, countries, out, fuels, fossil, resisting, agree]</td>
+      <td>[The author suggests that countries should unite against Saudi Arabia instead of expecting them to agree to the phaseout., Saudi Arabia is resisting the phaseout, and the author is critical of this stance., Some countries, like Saudi Arabia, are strongly resisting a rapid phaseout.]</td>
+    </tr>
+    <tr>
+      <th>67</th>
+      <td>66</td>
+      <td>25</td>
+      <td>66_necessary_societal_shift_changes</td>
+      <td>[necessary, societal, shift, changes, collective, what, individual, changing, paradigm, meaningful]</td>
+      <td>[Believes that a fundamental shift in societal values and narratives is necessary for positive change to occur., Societal changes are necessary before expecting individual actions to make a significant impact on climate change., Both individual actions and societal changes are necessary to achieve sustainability.]</td>
+    </tr>
+    <tr>
+      <th>68</th>
+      <td>67</td>
+      <td>24</td>
+      <td>67_republicans_gop_republican_cult</td>
+      <td>[republicans, gop, republican, cult, critical, party, stance, opposing, between, candidates]</td>
+      <td>[The author is drawing a comparison to the Log Cabin Republicans, implying that there is a group of Republicans who are more open to discussing climate change., Strongly critical of Republicans' environmental policies and actions., The author is critical of Republicans' stance on climate change.]</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>68</td>
+      <td>24</td>
+      <td>68_system_democracy_electoral_corruption</td>
+      <td>[system, democracy, electoral, corruption, representative, direct, flawed, political, us, culture]</td>
+      <td>[Criticism of representative democracy as ineffective without direct citizen involvement., Appreciation for the Swiss system of direct democracy and comparison to ancient Greek democracy., The current electoral system is a major obstacle to achieving a representative government.]</td>
+    </tr>
+    <tr>
+      <th>70</th>
+      <td>69</td>
+      <td>24</td>
+      <td>69_alone_insufficient_individual_extensive</td>
+      <td>[alone, insufficient, individual, extensive, solely, problem, combat, reducing, addressed, cannot]</td>
+      <td>[Individual actions are insufficient to address the crisis., Voting alone is insufficient to address the problem., Individual action alone is insufficient to address the scale of the climate crisis.]</td>
+    </tr>
+    <tr>
+      <th>71</th>
+      <td>70</td>
+      <td>24</td>
+      <td>70_methane_reported_significantly_emissions</td>
+      <td>[methane, reported, significantly, emissions, leaks, underestimated, travel, higher, landfills, air]</td>
+      <td>[Climate emissions from air travel are significantly higher than reported., Climate emissions from air travel are significantly higher than reported., The US energy industry's methane emissions are significantly higher than reported by the government.]</td>
+    </tr>
+    <tr>
+      <th>72</th>
+      <td>71</td>
+      <td>23</td>
+      <td>71_republicans_neglecting_ignoring_primaries</td>
+      <td>[republicans, neglecting, ignoring, primaries, changed, republican, presidential, party, particularly, crisis]</td>
+      <td>[Republicans are ignoring the climate crisis., Republicans are ignoring the climate crisis., Republicans are ignoring the climate crisis.]</td>
+    </tr>
+    <tr>
+      <th>73</th>
+      <td>72</td>
+      <td>22</td>
+      <td>72_media_corporate_denialism_biased</td>
+      <td>[media, corporate, denialism, biased, news, outlets, covering, adequately, downplayed, downplaying]</td>
+      <td>[Corporate media outlets are ignoring or downplaying Trump's climate denialism., Corporate media is not taking Trump's climate denialism seriously enough., Trump's climate denialism is being ignored or downplayed by corporate media.]</td>
+    </tr>
+    <tr>
+      <th>74</th>
+      <td>73</td>
+      <td>21</td>
+      <td>73_inaction_consequences_catastrophic_severe</td>
+      <td>[inaction, consequences, catastrophic, severe, felt, will, potentially, including, devastating, already]</td>
+      <td>[The consequences of inaction will be severe and potentially devastating., The consequences of inaction are severe and potentially catastrophic., The consequences of inaction will be severe and potentially catastrophic.]</td>
+    </tr>
+    <tr>
+      <th>75</th>
+      <td>74</td>
+      <td>21</td>
+      <td>74_defiance_raise_awareness_activists</td>
+      <td>[defiance, raise, awareness, activists, art, bring, group, attention, methods, disruptive]</td>
+      <td>[Climate activists are using unconventional methods to raise awareness about climate change., Climate Defiance's direct action tactics are an effective way to raise awareness about climate change and pressure individuals and organizations to take action., Defacing art is not an effective way to raise awareness about climate change.]</td>
+    </tr>
+    <tr>
+      <th>76</th>
+      <td>75</td>
+      <td>21</td>
+      <td>75_pumps_heat_pump_evs</td>
+      <td>[pumps, heat, pump, evs, slow, incentives, grid, transition, worst, crucial]</td>
+      <td>[Urgency to transition to EVs and heat pumps to combat climate change., Urgency to transition to EVs and heat pumps to address climate change., EVs and heat pumps are crucial in addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>77</th>
+      <td>76</td>
+      <td>20</td>
+      <td>76_effectiveness_skepticism_skeptical_about</td>
+      <td>[effectiveness, skepticism, skeptical, about, effectively, towards, market, quota, deal, via]</td>
+      <td>[Skepticism about the effectiveness of U.S. climate plans., Skepticism towards the effectiveness of a "free market" solution to climate change., Skepticism about the effectiveness of this solution in addressing climate change.]</td>
+    </tr>
+    <tr>
+      <th>78</th>
+      <td>77</td>
+      <td>20</td>
+      <td>77_pope_catholics_raise_francis</td>
+      <td>[pope, catholics, raise, francis, among, awareness, platform, efforts, church, unsuccessful]</td>
+      <td>[The Pope's efforts to raise awareness about climate change among Catholics are facing challenges., The Pope's efforts to raise climate awareness among Catholics may be challenging., The Pope's efforts to raise awareness about climate change among Catholics are ineffective.]</td>
+    </tr>
+    <tr>
+      <th>79</th>
+      <td>78</td>
+      <td>20</td>
+      <td>78_degree_goal_unachievable_5c</td>
+      <td>[degree, goal, unachievable, 5c, benchmark, degrees, celsius, unlikely, target, may]</td>
+      <td>[The 1.5-degree climate goal may be unachievable., The 1.5-degree climate goal may be unachievable., The 1.5-degree climate goal may be unrealistic or unachievable.]</td>
+    </tr>
+    <tr>
+      <th>80</th>
+      <td>79</td>
+      <td>20</td>
+      <td>79_greta_thunberg_protests_her</td>
+      <td>[greta, thunberg, protests, her, governments, cracking, crackdown, details, activism, protesters]</td>
+      <td>[Possible sympathy for Greta Thunberg and her activism., Criticism of government's handling of climate protests and Greta Thunberg's involvement., Greta Thunberg's approach is misguided.]</td>
+    </tr>
+    <tr>
+      <th>81</th>
+      <td>80</td>
+      <td>20</td>
+      <td>80_real_hoax_denied_controversy</td>
+      <td>[real, hoax, denied, controversy, debate, settled, myth, fact, scientific, not]</td>
+      <td>[Climate change is real and should not be denied., Climate change is real and not a hoax., Climate change is real and not a hoax.]</td>
+    </tr>
+    <tr>
+      <th>82</th>
+      <td>81</td>
+      <td>20</td>
+      <td>81_geoengineering_solution_sun_rays</td>
+      <td>[geoengineering, solution, sun, rays, deflecting, radiation, cloud, potential, as, viable]</td>
+      <td>[Climate change is a serious issue that requires innovative solutions, such as deflecting the sun's rays., The solution to deflect the sun's rays is being discussed as a potential solution., Deflecting the sun's rays is being presented as a potential solution to mitigate the effects of global warming.]</td>
+    </tr>
+    <tr>
+      <th>83</th>
+      <td>82</td>
+      <td>19</td>
+      <td>82_sea_florida_rise_level</td>
+      <td>[sea, florida, rise, level, south, flooding, levels, threat, vulnerable, rising]</td>
+      <td>[Sea level rise is a significant concern, but it's not an immediate threat., Acknowledges the reality of sea level rise in South Florida., Concerned about the pace of sea level rise in South Florida.]</td>
+    </tr>
+    <tr>
+      <th>84</th>
+      <td>83</td>
+      <td>19</td>
+      <td>83_oil_industry_critical_big</td>
+      <td>[oil, industry, critical, big, just, stop, harm, traitors, talking, alienating]</td>
+      <td>[The author is critical of the oil industry's impact on the environment., Critical of the oil industry and its environmental impact., The author is critical of Big Oil's actions.]</td>
+    </tr>
+    <tr>
+      <th>85</th>
+      <td>84</td>
+      <td>18</td>
+      <td>84_solely_public_failures_responsible</td>
+      <td>[solely, public, failures, responsible, failure, responsibility, fix, not, absolve, drives]</td>
+      <td>[The public is not solely responsible for climate failures., The public is not solely responsible for climate failures., The public is not solely responsible for climate failures.]</td>
+    </tr>
+    <tr>
+      <th>86</th>
+      <td>85</td>
+      <td>18</td>
+      <td>85_poisoning_atmospheric_term_name</td>
+      <td>[poisoning, atmospheric, term, name, cancer, accurate, convey, renaming, issue, description]</td>
+      <td>[The term "atmospheric carbon poisoning" is a more accurate and emotive description of the issue., Suggesting a name change to "Atmospheric Carbon Poisoning" to raise awareness and understanding., The proposed name "Atmospheric Carbon Poisoning" is a more accurate and descriptive term.]</td>
+    </tr>
+    <tr>
+      <th>87</th>
+      <td>86</td>
+      <td>17</td>
+      <td>86_optimistic_renewable_energy_potential</td>
+      <td>[optimistic, renewable, energy, potential, about, 233, archives, prior, rethink, excited]</td>
+      <td>[Optimistic about the potential for reducing greenhouse gas emissions., Optimistic about the potential of alternative energy., Optimistic about the potential for renewable energy to combat climate chaos.]</td>
+    </tr>
+    <tr>
+      <th>88</th>
+      <td>87</td>
+      <td>17</td>
+      <td>87_motivations_behind_skepticism_door</td>
+      <td>[motivations, behind, skepticism, door, campaigns, intentions, skeptical, statement, consumers, project]</td>
+      <td>[Skepticism towards the motivations behind the lawsuit., Skepticism about the motivations behind the proposed dismantling., Skepticism about the motivations behind the bill.]</td>
+    </tr>
+    <tr>
+      <th>89</th>
+      <td>88</td>
+      <td>17</td>
+      <td>88_industry_fuel_fossil_misinformation</td>
+      <td>[industry, fuel, fossil, misinformation, campaign, engaged, arguments, big, vested, ultrawealthy]</td>
+      <td>[The rise of far-right politicians is a consequence of the fossil fuel industry's misinformation campaign., The fossil fuel industry is engaged in a misinformation campaign to promote its interests., The fossil fuel industry is engaged in a misinformation campaign.]</td>
+    </tr>
+    <tr>
+      <th>90</th>
+      <td>89</td>
+      <td>17</td>
+      <td>89_emphasis_importance_responses_justice</td>
+      <td>[emphasis, importance, responses, justice, emphasized, planning, on, broadened, disabilities, charitable]</td>
+      <td>[Emphasis on the need for more effective policies to address climate change., Emphasis on the need for immediate action to address the climate crisis., Emphasis on the importance of saving the planet.]</td>
+    </tr>
+    <tr>
+      <th>91</th>
+      <td>90</td>
+      <td>17</td>
+      <td>90_exceed_target_5c_heating</td>
+      <td>[exceed, target, 5c, heating, pre, above, global, temperature, industrial, next]</td>
+      <td>[Global heating is likely to exceed the 1.5C target., Global heating will exceed the 1.5C target., Global heating will exceed the 1.5C target.]</td>
+    </tr>
+    <tr>
+      <th>92</th>
+      <td>91</td>
+      <td>17</td>
+      <td>91_ceo_exxon_public_statement</td>
+      <td>[ceo, exxon, public, statement, blaming, shifting, blame, blames, responsibility, familiarity]</td>
+      <td>[The CEO of Exxon is deflecting responsibility by blaming the public., Criticism of Exxon CEO's statement blaming the public for not fixing climate change., The author is critical of Exxon's CEO for blaming the public.]</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>92</td>
+      <td>16</td>
+      <td>92_right_voters_far_policies</td>
+      <td>[right, voters, far, policies, drive, rightward, populism, confederate, correctly, stochastic]</td>
+      <td>[Climate policies can have unintended consequences, such as driving voters to the far right., Climate policies can drive voters to the far right if not implemented correctly., Climate policies can drive voters to the far right.]</td>
+    </tr>
+    <tr>
+      <th>94</th>
+      <td>93</td>
+      <td>15</td>
+      <td>93_exports_coal_natural_worse</td>
+      <td>[exports, coal, natural, worse, gas, lng, destination, depending, environment, than]</td>
+      <td>[Natural gas is worse for the environment than coal., Natural gas is worse for the environment than coal., Natural gas exports are worse for the climate than coal.]</td>
+    </tr>
+    <tr>
+      <th>95</th>
+      <td>94</td>
+      <td>15</td>
+      <td>94_court_ruling_steyn_scientist</td>
+      <td>[court, ruling, steyn, scientist, awarded, damages, appeal, supreme, involvement, case]</td>
+      <td>[The maritime court's ruling is a significant development in the fight against climate change., Skeptical of the Court of Appeal's ruling that climate crisis is a matter of "opinion"., The Court of Appeal's ruling on the climate crisis is a matter of opinion.]</td>
+    </tr>
+    <tr>
+      <th>96</th>
+      <td>95</td>
+      <td>15</td>
+      <td>95_attacks_noaa_wing_media</td>
+      <td>[attacks, noaa, wing, media, science, right, jesse, watters, criticism, debunked]</td>
+      <td>[Criticism of right-wing media's attacks on climate science and NOAA., Criticism of right-wing media's attacks on NOAA and climate science., Criticism of right-wing media's attacks on NOAA and climate science.]</td>
+    </tr>
+    <tr>
+      <th>97</th>
+      <td>96</td>
+      <td>14</td>
+      <td>96_experience_personal_experiencing_firsthand</td>
+      <td>[experience, personal, experiencing, firsthand, weather, conditions, effects, local, their, 2021]</td>
+      <td>[They are sharing their personal experience with severe weather conditions as evidence of this impact., The author is presenting their personal experience of visiting Jackson Hole in 2021 and observing the lack of snow, which they believe supports their argument., The author's perspective is likely influenced by their local weather conditions and personal experience.]</td>
+    </tr>
+    <tr>
+      <th>98</th>
+      <td>97</td>
+      <td>14</td>
+      <td>97_consumption_reducing_plastic_essential</td>
+      <td>[consumption, reducing, plastic, essential, waste, imagine, caps, circular, canvas, biodegradability]</td>
+      <td>[Reducing consumption is the only way to make a significant impact on climate change., Reducing consumption and waste is crucial in addressing climate change., Reducing consumption is necessary, but unlikely to happen.]</td>
+    </tr>
+    <tr>
+      <th>99</th>
+      <td>98</td>
+      <td>14</td>
+      <td>98_interest_expertise_recommends_reading</td>
+      <td>[interest, expertise, recommends, reading, interested, related, potholer54, fiction, accessing, guidebook]</td>
+      <td>[Interest in reading a book about the climate crisis., The speaker is actively studying climate change, indicating a strong interest and likely expertise in the field., Interest in learning more about climate-related policies, as indicated by the link to the Inflation Reduction Act guidebook.]</td>
+    </tr>
+    <tr>
+      <th>100</th>
+      <td>99</td>
+      <td>14</td>
+      <td>99_growth_decoupling_economic_mutually</td>
+      <td>[growth, decoupling, economic, mutually, exclusive, co2, possible, emissions, reducing, decouple]</td>
+      <td>[Reducing CO2 emissions and economic growth are not mutually exclusive., Reducing CO2 emissions and economic growth are not mutually exclusive., Decoupling economic growth and CO2 emissions is possible.]</td>
+    </tr>
+    <tr>
+      <th>101</th>
+      <td>100</td>
+      <td>14</td>
+      <td>100_explicit_no_or_opinion</td>
+      <td>[explicit, no, or, opinion, perspective, opinions, perspectives, clear, topics, primarily]</td>
+      <td>[No explicit opinions or perspectives on climate change or its impacts., No explicit opinion or perspective on the cause or solution to climate change., No explicit opinion or perspective on climate change or its impact.]</td>
+    </tr>
+    <tr>
+      <th>102</th>
+      <td>101</td>
+      <td>13</td>
+      <td>101_thought_initially_was_believed</td>
+      <td>[thought, initially, was, believed, crisis, as, wildlife, bad, initial, but]</td>
+      <td>[The climate crisis is a serious issue, but the situation is better than initially thought., Initially believed the climate crisis was catastrophic, but now thinks it's not as bad., Climate crisis is a pressing issue, but not as severe as initially thought.]</td>
+    </tr>
+    <tr>
+      <th>103</th>
+      <td>102</td>
+      <td>13</td>
+      <td>102_cause_behavioural_breakdown_primary</td>
+      <td>[cause, behavioural, breakdown, primary, root, human, behavior, crisis, greenhouse, population]</td>
+      <td>[The root cause of climate breakdown is a "behavioural crisis" in humans., The root cause of climate breakdown is a "human 'behavioural crisis'"., The root cause of climate breakdown is a "behavioural crisis".]</td>
+    </tr>
+    <tr>
+      <th>104</th>
+      <td>103</td>
+      <td>13</td>
+      <td>103_mass_severe_consequences_deaths</td>
+      <td>[mass, severe, consequences, deaths, leading, unrest, will, 2000, syria, armed]</td>
+      <td>[The consequences of global heating will be severe, leading to wars over mass immigration and food/water security., The consequences of climate change will be severe and unavoidable, including mass crop failures, droughts, mass starvation, and social unrest., The consequences of climate change will be catastrophic, potentially leading to mass deaths.]</td>
+    </tr>
+    <tr>
+      <th>105</th>
+      <td>104</td>
+      <td>13</td>
+      <td>104_degrees_warming_keeping_5c</td>
+      <td>[degrees, warming, keeping, 5c, possibility, avoiding, global, 2c, skeptical, chances]</td>
+      <td>[Skeptical about the UN's prediction of global warming and the chances of keeping within the 1.5C threshold., Uncertainty about the possibility of avoiding 1.5 degrees C of global warming., Skeptical about the possibility of avoiding 1.5 degrees C of global warming.]</td>
+    </tr>
+    <tr>
+      <th>106</th>
+      <td>105</td>
+      <td>13</td>
+      <td>105_planting_skeptical_tree_trees</td>
+      <td>[planting, skeptical, tree, trees, solutions, ludicrously, enhanced, decarbonize, woods, naive]</td>
+      <td>[Skeptical about the benefits of planting trees in mitigating climate change., The author is skeptical of proposed solutions, such as aerosols, nuclear power, and tree planting., The author is skeptical about the effectiveness of large-scale tree planting as a solution to climate change.]</td>
+    </tr>
+    <tr>
+      <th>107</th>
+      <td>106</td>
+      <td>12</td>
+      <td>106_spread_fungus_populations_mosquitoes</td>
+      <td>[spread, fungus, populations, mosquitoes, driving, flu, mosquito, exacerbating, refrigeration, insect]</td>
+      <td>[Climate change may exacerbate the spread of bird flu., Climate change is likely driving the spread of the flesh-eating fungus in the American Southwest., Climate change is driving the spread of the fungus.]</td>
+    </tr>
+    <tr>
+      <th>108</th>
+      <td>107</td>
+      <td>12</td>
+      <td>107_degrowth_retraction_necessary_within</td>
+      <td>[degrowth, retraction, necessary, within, economic, growth, decommodification, compliant, reduction, 19]</td>
+      <td>[A significant economic retraction is necessary to reduce emissions and stay within current targets., Degrowth is necessary to combat climate change., Degrowth is not necessary for the environment.]</td>
+    </tr>
+    <tr>
+      <th>109</th>
+      <td>108</td>
+      <td>12</td>
+      <td>108_uncertainty_existence_unclear_uncertain</td>
+      <td>[uncertainty, existence, unclear, uncertain, predict, ranking, atp, bc, knows, possibility]</td>
+      <td>[Uncertainty about the exact ranking of CO2 emissions between construction and oil and gas in BC., Uncertainty about the existence of a new climate era., There is uncertainty or disagreement about the existence or severity of climate change.]</td>
+    </tr>
+    <tr>
+      <th>110</th>
+      <td>109</td>
+      <td>12</td>
+      <td>109_other_issues_housing_pressing</td>
+      <td>[other, issues, housing, pressing, why, more, piece, secondary, overlooked, davos]</td>
+      <td>[Suggesting that other issues, such as the housing crisis, are more pressing concerns., Climate change is not a major concern, and other issues (housing crisis) are more pressing., The author may be implying that other global issues are more pressing than climate change.]</td>
+    </tr>
+    <tr>
+      <th>111</th>
+      <td>110</td>
+      <td>12</td>
+      <td>110_forests_fast_bamboo_storing</td>
+      <td>[forests, fast, bamboo, storing, tree, biodiversity, carbon, trees, planting, tool]</td>
+      <td>[Reforestation efforts should prioritize old-growth, multi-layered forests, and avoid large-scale logging and fragmentation from roads., The author suggests an alternative solution: farming fast-growing and hardy plants (like bamboo) and burying them underground to remove carbon from the atmosphere., Large, diverse forests are the most effective tool for storing carbon and reversing biodiversity loss.]</td>
+    </tr>
+    <tr>
+      <th>112</th>
+      <td>111</td>
+      <td>12</td>
+      <td>111_frustrated_disappointed_disappointment_seems</td>
+      <td>[frustrated, disappointed, disappointment, seems, questioning, outcome, frustration, backtrack, happened, nomination]</td>
+      <td>[Possibly frustrated or disappointed by the nomination., The author seems to be expressing disappointment or frustration with the outcome., The author seems to be expressing frustration or disappointment about the lack of progress.]</td>
+    </tr>
+    <tr>
+      <th>113</th>
+      <td>112</td>
+      <td>12</td>
+      <td>112_acceptance_resignation_sense_appears</td>
+      <td>[acceptance, resignation, sense, appears, or, than, rather, detached, beer, seems]</td>
+      <td>[May be trying to convey a sense of resignation or acceptance about the issue., The person seems to have a sense of resignation or acceptance about the topic., There is a sense of resignation or acceptance about the situation.]</td>
+    </tr>
+    <tr>
+      <th>114</th>
+      <td>113</td>
+      <td>11</td>
+      <td>113_obstacle_major_obstacles_ignorance</td>
+      <td>[obstacle, major, obstacles, ignorance, political, education, overcoming, addressing, gerrymandering, obstructionism]</td>
+      <td>[The current political power structure is a major obstacle to climate action., This ignorance is a major obstacle to addressing climate-related issues., The current political situation is a significant obstacle to addressing the climate crisis.]</td>
+    </tr>
+    <tr>
+      <th>115</th>
+      <td>114</td>
+      <td>11</td>
+      <td>114_government_spending_priorities_funds</td>
+      <td>[government, spending, priorities, funds, military, war, prioritizing, over, criticism, prioritization]</td>
+      <td>[The author is critical of the US government's spending priorities., Criticism of the U.S. government's priorities, emphasizing the disparity between military spending and climate crisis funding., Criticism of the U.S. government's prioritization of military spending over climate crisis funding.]</td>
+    </tr>
+    <tr>
+      <th>116</th>
+      <td>115</td>
+      <td>11</td>
+      <td>115_attention_believes_immediate_action</td>
+      <td>[attention, believes, immediate, action, requires, actionable, visionary, thinkers, attribute, outweighs]</td>
+      <td>[The author suggests that climate change is a catastrophic issue that requires immediate attention and action., The author believes that climate change is a pressing issue that requires immediate attention and action., The author likely believes that climate change is a pressing issue that requires immediate attention and action.]</td>
+    </tr>
+    <tr>
+      <th>117</th>
+      <td>116</td>
+      <td>11</td>
+      <td>116_clear_no_opinion_expressed</td>
+      <td>[clear, no, opinion, expressed, perspective, text, or, input, perspectives, stance]</td>
+      <td>[No clear opinion or perspective is presented in the text input., No clear opinion or perspective is expressed on the topic., No clear opinion or perspective is expressed in the text.]</td>
+    </tr>
+    <tr>
+      <th>118</th>
+      <td>117</td>
+      <td>10</td>
+      <td>117_drought_supply_water_unprecedented</td>
+      <td>[drought, supply, water, unprecedented, agriculture, johannesburg, days, bogota, dry, panama]</td>
+      <td>[The Amazon drought is unprecedented and severe., The current drought in the West is unprecedented in at least 5 centuries, according to a study., Mexico City and Bogota have limited water supply (30-50 days).]</td>
+    </tr>
+    <tr>
+      <th>119</th>
+      <td>118</td>
+      <td>10</td>
+      <td>118_subsidies_sustainable_banned_goods</td>
+      <td>[subsidies, sustainable, banned, goods, taxes, must, receives, reallocating, instructions, redirected]</td>
+      <td>[Subsidies for sustainable goods are necessary to make them competitive with fossil fuels., Fossil fuel subsidies must be banned., Fossil fuel subsidies must be banned.]</td>
+    </tr>
+    <tr>
+      <th>120</th>
+      <td>119</td>
+      <td>10</td>
+      <td>119_political_undesirable_elite_frustration</td>
+      <td>[political, undesirable, elite, frustration, system, failure, options, class, working, ndp]</td>
+      <td>[Frustration with the current political situation, feeling stuck between two undesirable options., The user is frustrated and disillusioned with the political system, seeing both options as equally undesirable., Frustration with the political system's prioritization of maintaining the status quo and enriching the wealthy elite.]</td>
+    </tr>
+    <tr>
+      <th>121</th>
+      <td>120</td>
+      <td>10</td>
+      <td>120_voters_candidate_parties_manipulative</td>
+      <td>[voters, candidate, parties, manipulative, subtlety, scammed, cognitive, ivy, teams, comprehend]</td>
+      <td>[The political candidate is using manipulative tactics to influence voters., The candidate is using Ivy Leaguers to lecture voters on their supposed ignorance., The candidate is willing to use behavioral economists and cognitive security teams to control voters' decisions.]</td>
+    </tr>
+  </tbody>
+</table>
