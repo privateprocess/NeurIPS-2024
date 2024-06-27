@@ -1,5 +1,38 @@
 # NeurIPS-2024
 
+## Instructions
+
+### File Descriptions
+1. *constants.py.template*: API tokens required to run the code (Langchain not needed)
+2. *opinion_extraction.ipynb*: The notebook containing the opinion extraction code.
+3. *climate.csv*: csv of the [Climate Kaggle dataset](https://www.kaggle.com/datasets/asaniczka/public-opinion-on-climate-change-updated-daily/) and the **LLM extracted documents**
+4. *opinion_clustering.ipynb*: The notebook containing the BERTopic clustering code.
+5. *topic-models*: saved topic models in safetensors form.
+6. *seg-docs*: Semantic chunking segmented documents stored in pkl form.
+7. *document_length_visualization.ipynb*: name speaks for itself.
+8. *opinion_evaluation.ipynb*: Code that evaluates the accuracy of the opinion extractions.
+9. *evals.json*: Full LLM evaluation outputs, evaluations in list form, and ids in the dataset (TODO: change this to comment ids).
+
+### Replication Instructions:
+**For the Clusters:**
+1. Run opinion_clustering.ipynb (**excluding** marked off sections; those include semantic chunking and training of BERTopic, which is already saved)
+2. Profit?
+
+**To Re-Evaluate Extracted Statements:**
+1. Run opinion_evaluation.ipynb
+
+**To Extract From Your Own Dataset**
+1. (You won't need to do this unless you have a custom dataset you want to try)
+2. Make sure you have your desired dataset in the data folder. Specify path in opinion_extraction.ipynb.
+3. Modify dictionary keys and "full_text" get desired text.
+4. Run opinion_extraction.ipynb
+5. Make sure to evaluate and cluster them!
+
+
+
+
+
+
 ## Sample LLM Opinion Extraction Output
 **Original Text:**
 
